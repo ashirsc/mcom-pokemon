@@ -1,3 +1,5 @@
+@import "~antd/dist/antd.css";
+
 .App {
   text-align: center;
 }
@@ -14,13 +16,49 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  
+  background: linear-gradient(to top left, rgb(7, 88, 185), rgba(11, 95, 231, 0), rgb(76, 34, 174)),
+    linear-gradient(to top right, rgb(19, 16, 208), rgba(11, 95, 231, 0), rgb(16, 180, 249))
+    rgba(11, 95, 231, 1);
+
   min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: white;
+  font-family: montserrat, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+.light {
+  font-weight: 100;
+
+}
+.heavy {
+  font-weight: 900;
+
+}
+
+.poke {
+  background-color: #5d677c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
+  color: white;
+}
+.poke-header {
   color: white;
 }
 
@@ -34,5 +72,30 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.poke-container {
+  margin: 0 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+  --stagger-delay: 100ms;
+}
+
+.poke-card {
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 100;
+    transform: scale(1);
   }
 }
