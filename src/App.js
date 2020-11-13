@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 
 import { Pokemon } from "./poke"
+import { Arena } from "./arena"
+
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
       <header className="App-header">
         <div className='header-title'>
 
-        <p className='heavy'>Business Article Presentation</p>
+        <p className='heavy'>Poke app</p>
         <p className='light'>
           DREW HIRSCHI
         </p>
@@ -18,6 +20,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
       </header>
       <Pokemon />
+      <Arena/>
     </div>
   );
 }
